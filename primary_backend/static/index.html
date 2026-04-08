@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Network Routing | Logistic Regression</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Dynamic Routing <span class="badge">Logistic Regression AI</span></h1>
+            <div class="status-panel">
+                <div class="status-card">
+                    <span class="label">Initial Path Cost</span>
+                    <span id="initial-cost" class="value">0</span>
+                </div>
+                <div class="status-card">
+                    <span class="label">Optimized Path Cost</span>
+                    <span id="optimized-cost" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="map-section">
+                <div id="network-map"></div>
+            </div>
+            
+            <aside class="control-panel">
+                <h3>Routing Analysis</h3>
+                
+                <div class="analysis-box">
+                    <span class="label">Initial Shortest Path:</span>
+                    <div id="initial-path" class="path-display path-grey">A → B → C</div>
+                </div>
+
+                <div class="analysis-box">
+                    <span class="label">Optimized Dynamic Path:</span>
+                    <div id="optimized-path" class="path-display path-blue">A → E → C</div>
+                </div>
+
+                <div class="analysis-box">
+                    <span class="label">Predicted Congestion:</span>
+                    <div id="congested-list" class="congested-text">None detected</div>
+                </div>
+
+                <div class="actions">
+                    <button id="sim-btn" class="btn btn-primary">Start Traffic Simulation</button>
+                </div>
+
+                <div class="legend">
+                    <div class="legend-item"><span class="dot green"></span> Optimized Path</div>
+                    <div class="legend-item"><span class="dot grey"></span> Initial Path</div>
+                    <div class="legend-item"><span class="dot red"></span> Congested Link</div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

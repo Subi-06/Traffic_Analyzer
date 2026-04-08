@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": "A", "label": "Switch A"},
+    {"id": "B", "label": "Router B"},
+    {"id": "C", "label": "Server C"},
+    {"id": "D", "label": "Client D"},
+    {"id": "E", "label": "Router E"}
+  ],
+  "edges": [
+    {"from": "A", "to": "B", "traffic": 30, "latency": 10, "bandwidth": 500, "packet_loss": 0.5},
+    {"from": "B", "to": "C", "traffic": 40, "latency": 15, "bandwidth": 1000, "packet_loss": 0.2},
+    {"from": "A", "to": "D", "traffic": 50, "latency": 20, "bandwidth": 300, "packet_loss": 1.5},
+    {"from": "D", "to": "E", "traffic": 20, "latency": 10, "bandwidth": 1000, "packet_loss": 0.0},
+    {"from": "E", "to": "C", "traffic": 25, "latency": 5, "bandwidth": 2000, "packet_loss": 0.1},
+    {"from": "B", "to": "E", "traffic": 70, "latency": 25, "bandwidth": 100, "packet_loss": 2.5}
+  ]
+}
